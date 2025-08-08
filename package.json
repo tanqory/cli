@@ -2,17 +2,41 @@
   "name": "@tanqory/cli",
   "version": "0.0.1",
   "description": "A command-line interface for Tanqory theme development.",
-  "author": "Your Name <your.email@example.com>",
+  "author": {
+    "name": "TANQ PTE. LTD.",
+    "email": "dev@tanqory.com",
+    "url": "https://tanqory.com"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/tanqory/cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanqory/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tanqory/cli/issues"
+  },
+  "main": "src/index.js",
   "bin": {
-    "tanqory": "./bin/tanqory"
+    "tanqory": "bin/tanqory"
   },
   "files": [
-    "/bin",
-    "/src"
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "node src/index.js dev",
+    "build": "echo \"Build completed\"",
+    "lint": "echo \"Linting...\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build && npm run lint",
+    "publish:beta": "npm version prerelease --preid=beta && npm publish --tag beta",
+    "publish:patch": "npm version patch && npm publish",
+    "publish:minor": "npm version minor && npm publish",
+    "publish:major": "npm version major && npm publish"
   },
   "dependencies": {
     "@tanqory/api-client": "^0.1.5",
@@ -32,14 +56,27 @@
     "random-port": "^0.1.0"
   },
   "engines": {
-    "node": ">=12.0.0"
+    "node": ">=12.0.0",
+    "npm": ">=6.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "cli",
     "tanqory",
-    "theme"
+    "theme",
+    "development",
+    "tool",
+    "command-line",
+    "theme-development",
+    "web-development"
   ],
   "devDependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": []
 }
