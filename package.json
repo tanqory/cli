@@ -1,6 +1,6 @@
 {
   "name": "@tanqory/cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A command-line interface for Tanqory theme development.",
   "author": {
     "name": "TANQ PTE. LTD.",
