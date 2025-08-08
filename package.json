@@ -1,0 +1,45 @@
+{
+  "name": "tanqory-cli",
+  "version": "1.0.0",
+  "description": "A command-line interface for Tanqory theme development.",
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "bin": {
+    "tanqory": "./bin/tanqory"
+  },
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tanqory/api-client": "^0.1.5",
+    "@tanqory/site-utils": "^0.0.26",
+    "archiver": "^7.0.1",
+    "axios": "^0.21.1",
+    "chalk": "^4.1.0",
+    "commander": "^12.0.0",
+    "cors": "^2.8.5",
+    "extract-zip": "^2.0.1",
+    "form-data": "^4.0.4",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "nunjucks": "^3.2.4",
+    "open": "^10.2.0",
+    "ora": "^5.4.0",
+    "random-port": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "keywords": [
+    "cli",
+    "tanqory",
+    "theme"
+  ],
+  "devDependencies": {
+    "express": "^5.1.0"
+  }
+}

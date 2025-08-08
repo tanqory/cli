@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+
+// นี่คือจุดเริ่มต้นของ CLI ของเรา
+// เรียกใช้ไฟล์ index.js ซึ่งเป็น logic หลัก
+require('../src/index.js');
