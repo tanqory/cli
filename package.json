@@ -1,6 +1,6 @@
 {
-  "name": "tanqory-cli",
-  "version": "1.0.0",
+  "name": "@tanqory/cli",
+  "version": "0.0.1",
   "description": "A command-line interface for Tanqory theme development.",
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
