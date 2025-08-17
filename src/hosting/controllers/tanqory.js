@@ -1,7 +1,7 @@
 (function (global) {
     'use strict';
     // กำหนด URL ของ API ตะกร้า ตามที่ mount ใน Express (เช่น app.use('/cart', cartRoutes))
-    const tanqoryEnv = {"URL_API_EDITOR":"https://api-editor-staging.tanqory.com","URL_STORAGE":"https://storage-staging.tanqory.com","URL_HOSTING":"https://mytanqory-staging.com","URL_API_ANALYTICS":"https://api-analytics-staging.tanqory.com","EFS_PATH":"/mnt/storage/file-system","WHITELIST":["https://manage-staging.tanqory.com"],"SITE_ID":"67a4274918ed4bb247c0f1cd"};
+    const tanqoryEnv = {"URL_API_EDITOR":"https://api-editor.tanqory.com","URL_STORAGE":"https://storage.tanqory.com","URL_HOSTING":"https://mytanqory.com","URL_API_ANALYTICS":"https://api-analytics.tanqory.com","EFS_PATH":"/mnt/storage/file-system","WHITELIST":["https://manage.tanqory.com"],"SITE_ID":"67a4274918ed4bb247c0f1cd"};
     const CART_ENDPOINT = '/api/v1/cart';
     const ANALYTICS_ENDPOINT = '/api/v1/sites'
 

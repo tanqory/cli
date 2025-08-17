@@ -8,9 +8,9 @@ const fs = require('fs');
 
 // กำหนด Base URL ของ API
 // เราจะใช้ URL จาก config เป็นหลัก แต่จะมีค่า default ให้
-const API_BASE_URL = config.get('apiBaseUrl') || 'https://api-staging.tanqory.com/api/v1';
-const AUTH_API_URL = config.get('authApiUrl') || 'https://api-auth-staging.tanqory.com/api/v1';
-const STORAGE_API_URL = config.get('storageApiUrl') || 'https://api-storage-staging.tanqory.com/api/v1';
+const API_BASE_URL = config.get('apiBaseUrl') || 'https://api.tanqory.com/api/v1';
+const AUTH_API_URL = config.get('authApiUrl') || 'https://api-auth.tanqory.com/api/v1';
+const STORAGE_API_URL = config.get('storageApiUrl') || 'https://api-storage.tanqory.com/api/v1';
 
 class TanqoryAPI {
   constructor() {

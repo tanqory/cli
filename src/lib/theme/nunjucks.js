@@ -2,9 +2,9 @@ const nunjucks = require('nunjucks');
 
 const tanqoryEnv = {
     URL_API_EDITOR: "http://localhost:3002",
-    URL_STORAGE: "https://storage-staging.tanqory.com",
+    URL_STORAGE: "https://storage.tanqory.com",
     URL_HOSTING: "http://localhost:3003",
-    URL_API_ANALYTICS: "https://api-analytics-staging.tanqory.com",
+    URL_API_ANALYTICS: "https://api-analytics.tanqory.com",
     EFS_PATH: process.cwd(),
     WHITELIST: ["http://localhost:8082"]
 }
@@ -264,25 +264,32 @@ const setupNunjucks = ({ siteId, themeId, lang, components, placeholders, hostna
         }
     });
     envNunjucks.addFilter('link', (value) => {
-        let enpont = ""
-        if(value == '/home') {
-            value = ""
-        }
-        if(tanqoryEnv.URL_HOSTING.includes("http://")) {
-            enpont = tanqoryEnv.URL_HOSTING.replace("http://", `http://${siteId}.`)
-        } else {
-            enpont = tanqoryEnv.URL_HOSTING.replace("https://", `https://${siteId}.`)
-        }
-        if(lang) {
-            if(hostname) {
-                return `${protocol}://${hostname}/${lang.code}${value}`;
-            }
-            return `${enpont}/${lang.code}${value}`;
-        }
-        if(hostname) {
-            return `${protocol}://${hostname}${value}}`;
-        }
-        return `${enpont}${value}`;
+        // let enpont = ""
+        // if(value == '/home') {
+        //     value = ""
+        // }
+        // if(tanqoryEnv.URL_HOSTING.includes("http://")) {
+        //     enpont = tanqoryEnv.URL_HOSTING.replace("http://", `http://${siteId}.`)
+        // } else {
+        //     enpont = tanqoryEnv.URL_HOSTING.replace("https://", `https://${siteId}.`)
+        // }
+        // if(lang) {
+        //     if(lang.code) {
+        //         if(hostname) {
+        //             return `${protocol}://${hostname}/${lang.code}${value}`;
+        //         }
+        //         return `${enpont}/${lang.code}${value}`;
+        //     } else {
+        //         if(hostname) {
+        //             return `${protocol}://${hostname}${value}`;
+        //         }
+        //         return `${enpont}${value}`;
+        //     }
+        // }
+        // if(hostname) {
+        //     return `${protocol}://${hostname}${value}}`;
+        // }
+        return `${value}`;
     });
     envNunjucks.addFilter('image_placeholder', (value) => {
         return new nunjucks.runtime.SafeString(placeholders[value] || placeholders['default']);

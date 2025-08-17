@@ -10,28 +10,10 @@ const client = require("../services/tanqory/client");
 
 exports.getHome = async function (req, res) {
     try {
-        // const products = client.product;
-        // const p = await products.all();
-        
-        
-        // console.log("getHome      [PATH]", req.path);
-        // console.log("getHome      [URL]", req.url);
-        // console.log("getHome      [originalUrl]", req.originalUrl);
         const siteId = req.site.siteId;
         const themeId = req.site.themeId;
         const country = req.country;
         const language = req.language;
-        // const settings = req.settings;
-        
-        // const data = await SiteModel(getSiteData(siteId, country?.country_code));
-
-        // const seo = {
-        //     title: `Home | ${settings.general.store_name}`,
-        //     description: settings.general.store_name,
-        //     image: "",
-        //     favicon: ""
-        // }
-
         const theme = new ThemeManager({ projectPath: process.cwd(), siteId, themeId });
         const pageHtml = await theme.pageHtml("index.json");
         res.send(pageHtml);

@@ -1,6 +1,3 @@
-
------
-
 # @tanqory/cli
 
 **`@tanqory/cli`** is a command-line interface tool designed to help developers manage and build themes for the Tanqory platform easily and efficiently.

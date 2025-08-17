@@ -23,7 +23,7 @@ class ThemeManager {
     for(let i = 0; i < componentFiles.length; i++) {
       const componentName = componentFiles[i];
       const componentConent = await this.component.content(componentName);
-      components[componentName.split(".")[0]] = componentConent;
+      components[componentName.split(".")[0]] = componentConent.template;
     }
 
     const envNunjucks = setupNunjucks({

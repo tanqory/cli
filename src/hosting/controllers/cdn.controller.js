@@ -25,7 +25,7 @@ exports.getAssetContent = async function (req, res) {
 exports.getCdnContent = async function (req, res) {
     try {
         if(req.params.segment.join("/") === "assets/js/tanqory.js") {
-            const url = `https://${req.site.siteId}.mytanqory-staging.com/en/cdn/assets/js/tanqory.js`;
+            const url = `https://${req.site.siteId}.mytanqory.com/en/cdn/assets/js/tanqory.js`;
             const response = await axios.get(url);
             res.set('Content-Type', 'application/javascript');
             res.send(response.data);

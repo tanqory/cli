@@ -31,10 +31,10 @@ const client = TanqoryClient.init({
     accessToken: config.accessToken,
     refreshToken: config.refreshToken,
     siteId: config.siteId,
-    apiAuthUrl: 'https://api-auth-staging.tanqory.com',
-    apiFormsUrl: 'https://api-forms-staging.tanqory.com',
-    apiSitesUrl: 'https://api-staging.tanqory.com',
-    apiStorageUrl: 'https://api-storage-staging.tanqory.com',
+    apiAuthUrl: 'https://api-auth.tanqory.com',
+    apiFormsUrl: 'https://api-forms.tanqory.com',
+    apiSitesUrl: 'https://api.tanqory.com',
+    apiStorageUrl: 'https://api-storage.tanqory.com',
 })
 
 // new TanqoryClient({

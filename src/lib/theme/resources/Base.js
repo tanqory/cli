@@ -19,7 +19,10 @@ function extractBlock(blockString) {
             return null;
         }
     } else {
-        return null;
+        return {
+          template: blockString,
+          model: {}
+        };
     }
 }
 
