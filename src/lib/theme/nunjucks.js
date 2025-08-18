@@ -428,7 +428,7 @@ function mapData(content, block, _data, exampleProducts) {
                 if(content?.props?.[field.id]) {
                     let collection = data?.collections.find(i => i.id === content.props[field.id]);
                     collection.products = collection?.conditions?.map(pid => {
-                        let product = data?.products?.find(i => i._id === pid);
+                        let product = data?.products?.find(i => i?._id === pid);
                         return product;
                     });
                     content.props[field.id] = collection;

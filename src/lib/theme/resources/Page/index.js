@@ -35,7 +35,11 @@ async function transformData(params, modelComponent = null, projectPath, siteId,
         } else if(model.type === "menu") {
           block.props[field] = await transformMenu(options);
         } else if(model.type === "collection") {
-          block.props[field] = await transformCollection(options);
+          try {
+            block.props[field] = await transformCollection(options);
+          } catch (error) {
+            console.log("Error, transformCollection()", error.message)
+          }
         } else {
         //   console.log(" |- ⚪️ :", model.type)
         }

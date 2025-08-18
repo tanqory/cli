@@ -70,7 +70,6 @@ async function transformMenu({ value }) {
     if(data) {
         if(data.tqr_customer_sales_channels_navigation_add_menu_items?.length) {
             const response = await resolveMenuHrefs(data.tqr_customer_sales_channels_navigation_add_menu_items);
-            console.log("response", response)
             return {
                 id: data?._id || value,
                 title: data?.tqr_customer_sales_channels_navigation_add_title || '',
